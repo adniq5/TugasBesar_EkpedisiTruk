@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sistem Informasi Eksedisi Truck</title>
+    <link rel="stylesheet" href="styles.css"> <!-- Link ke file CSS -->
+</head>
+<body>
+    <header>
+        <h1>Input Data Booking Truck</h1>
+    </header>
+    <main>
+        <section id="booking-form">
+            <h2>Form Booking Truck</h2>
+            <form id="dataForm">
+                <div class="form-group">
+                    <label for="customer_id">Nama Customer:</label>
+                    <select id="customer_id" required>
+                        <option value="" disabled selected>Pilih Customer</option>
+                        <!-- Options akan diisi dengan JavaScript -->
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label for="order_id">Order ID:</label>
+                    <select id="order_id" required>
+                        <option value="" disabled selected>Pilih Order</option>
+                        <!-- Options akan diisi dengan JavaScript -->
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label for="quantity">Jumlah Truck:</label>
+                    <input type="number" id="quantity" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="price">Harga:</label>
+                    <input type="text" id="price" required readonly>
+                </div>
+
+                <div class="form-group">
+                    <label for="total_amount">Total Biaya:</label>
+                    <input type="text" id="total_amount" required readonly>
+                </div>
+
+                <div class="form-group">
+                    <label for="is_paid">Status Pembayaran:</label>
+                    <input type="checkbox" id="is_paid">
+                </div>
+
+                <div class="form-group">
+                    <label for="proof">Bukti Pembayaran:</label>
+                    <input type="file" id="proof" required>
+                </div>
+
+                <button type="submit">Kirim Booking</button>
+            </form>
+            <div id="message" class="message"></div>
+        </section>
+    </main>
+
+    <script src="app.js"></script> <!-- Link ke file JavaScript -->
+</body>
+</html>
