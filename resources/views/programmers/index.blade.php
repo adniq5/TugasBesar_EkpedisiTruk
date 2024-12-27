@@ -2,7 +2,6 @@
 
 @section('content')
     <h1>Programmers</h1>
-    <a href="{{ route('programmers.create') }}" class="btn btn-primary mb-3">Add Programmer</a>
     <table class="table table-bordered">
         <thead>
             <tr>
@@ -12,7 +11,6 @@
                 <th>Jurusan</th>
                 <th>Instansi</th>
                 <th>Image</th>
-                <th>Actions</th>
             </tr>
         </thead>
         <tbody>
@@ -30,14 +28,7 @@
                             <span>No Image</span>
                         @endif
                     </td>
-                    <td>
-                        <a href="{{ route('programmers.edit', $programmer) }}" class="btn btn-warning btn-sm">Edit</a>
-                        <form action="{{ route('programmers.destroy', $programmer) }}" method="POST" style="display:inline;">
-                            @csrf
-                            @method('DELETE')
-                            <button type="submit" class="btn btn-danger btn-sm" onclick="return confirm('Are you sure you want to delete this programmer?');">Delete</button>
-                        </form>
-                    </td>
+                    
                 </tr>
             @endforeach
         </tbody>
